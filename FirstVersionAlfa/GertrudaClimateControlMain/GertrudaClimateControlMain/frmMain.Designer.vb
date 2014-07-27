@@ -102,7 +102,7 @@ Partial Class frmMain
         Me.AcceptButton = Me.btnStartStop
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(316, 209)
+        Me.ClientSize = New System.Drawing.Size(316, 100)
         Me.Controls.Add(Me.lblNH)
         Me.Controls.Add(Me.lblNT)
         Me.Controls.Add(Me.Label1)

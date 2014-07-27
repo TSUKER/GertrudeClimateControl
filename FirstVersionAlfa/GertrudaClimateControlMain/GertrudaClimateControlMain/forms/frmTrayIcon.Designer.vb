@@ -23,20 +23,23 @@ Partial Class frmTrayIcon
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTrayIcon))
         Me.iconTrayMainIcon = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.mainTrayMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.mnuShowMain = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSettings = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuShowMain = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.mainTrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'iconTrayMainIcon
         '
+        Me.iconTrayMainIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.iconTrayMainIcon.BalloonTipText = "Climate Control is started"
         Me.iconTrayMainIcon.BalloonTipTitle = "Gertruda Climate"
         Me.iconTrayMainIcon.ContextMenuStrip = Me.mainTrayMenu
+        Me.iconTrayMainIcon.Icon = CType(resources.GetObject("iconTrayMainIcon.Icon"), System.Drawing.Icon)
         Me.iconTrayMainIcon.Text = "GCC"
         Me.iconTrayMainIcon.Visible = True
         '
@@ -46,25 +49,25 @@ Partial Class frmTrayIcon
         Me.mainTrayMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.mainTrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuShowMain, Me.mnuSettings, Me.mnuAbout})
         Me.mainTrayMenu.Name = "mainTrayMenu"
-        Me.mainTrayMenu.Size = New System.Drawing.Size(134, 70)
+        Me.mainTrayMenu.Size = New System.Drawing.Size(153, 92)
+        '
+        'mnuShowMain
+        '
+        Me.mnuShowMain.Name = "mnuShowMain"
+        Me.mnuShowMain.Size = New System.Drawing.Size(152, 22)
+        Me.mnuShowMain.Text = "Show Main"
         '
         'mnuSettings
         '
         Me.mnuSettings.Name = "mnuSettings"
-        Me.mnuSettings.Size = New System.Drawing.Size(133, 22)
+        Me.mnuSettings.Size = New System.Drawing.Size(152, 22)
         Me.mnuSettings.Text = "Settings"
         '
         'mnuAbout
         '
         Me.mnuAbout.Name = "mnuAbout"
-        Me.mnuAbout.Size = New System.Drawing.Size(133, 22)
+        Me.mnuAbout.Size = New System.Drawing.Size(152, 22)
         Me.mnuAbout.Text = "About"
-        '
-        'mnuShowMain
-        '
-        Me.mnuShowMain.Name = "mnuShowMain"
-        Me.mnuShowMain.Size = New System.Drawing.Size(133, 22)
-        Me.mnuShowMain.Text = "Show Main"
         '
         'Label1
         '
