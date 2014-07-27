@@ -4,6 +4,7 @@ Imports System.IO
 
 Module mdlAlert
     Public smsru As String = "http://sms.ru/sms/send?api_id="
+
     Public Sub SoundAlertPlay()
         Dim sndAlert As New Media.SoundPlayer
         sndAlert.Stream = My.Resources.ResourceManager.GetStream("criticalsound")
@@ -16,6 +17,7 @@ Module mdlAlert
         Dim xmlfilepath As String
         Dim msgN As String
         Dim smsTo As String
+        Dim smskeySTR As String = My.Settings.SMS_KEY
         Dim strFrom As String = My.Settings.SMS_FROM
 
         If My.Settings.SMS_ENABLE = True Then
@@ -35,10 +37,24 @@ Module mdlAlert
 
             Using wc As New WebClient()
                 Dim startupPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup)
-                wc.DownloadFile(smsru & My.Settings.SMS_KEY & "&from=" & strFrom & "&to=" & smsTo & "&text=" & msgN & "&partner_id=29591", xmlfilepath)
+                wc.DownloadFile(smsru & smskeySTR & "&from=" & strFrom & "&to=" & smsTo & "&text=" & msgN & "&partner_id=29591", xmlfilepath)
             End Using
 
         End If
+    End Sub
+    Public Sub BallonAlert()
+        Dim msgN As String
+
+        msgN = "CRITICAL|" & My.Settings.SMS_MSG_TMPL.ToString & "|"
+        msgN = msgN.Replace("{PET_NAME}", My.Settings.PETNAME)
+
+        With frmTrayIcon
+
+            .iconTrayMainIcon.BalloonTipText = msgN
+            .iconTrayMainIcon.BalloonTipIcon = ToolTipIcon.Error
+            .iconTrayMainIcon.ShowBalloonTip(17283)
+
+        End With
     End Sub
 
 End Module

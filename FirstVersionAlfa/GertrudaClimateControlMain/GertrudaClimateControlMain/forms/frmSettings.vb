@@ -13,6 +13,8 @@
         txtSMSfrom.Text = My.Settings.SMS_FROM
         txtSMSmsg.Text = My.Settings.SMS_MSG_TMPL
         txtSMSto.Text = My.Settings.SMS_TO
+        If My.Settings.SMS_ENABLE = True Then checkSmsEnable.CheckState = CheckState.Checked
+        If My.Settings.SMS_ENABLE = False Then checkSmsEnable.CheckState = CheckState.Unchecked
 
         txtPetName.Text = My.Settings.PETNAME
         cmbCOMport.Text = My.Settings.COMPORT

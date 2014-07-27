@@ -83,7 +83,7 @@
                 .PortName = sCom
                 .Open()
                 If .IsOpen = True Then
-                    .WriteLine("67.00") '("T\r\n")
+                    .WriteLine("T\r\n") 'FOR TEST UART RX=TX: ("67.00")
                     MsgBox("w-t-ok")
                     humidity = .ReadLine.ToString()
                     .Close()
@@ -95,7 +95,7 @@
                 .PortName = sCom
                 .Open()
                 If .IsOpen = True Then
-                    .WriteLine("78.00") '("H\r\n")
+                    .WriteLine("H\r\n") 'FOR TEST UART RX=TX:("78.00")
                     MsgBox("w-t-ok")
                     Temrature = .ReadLine.ToString()
                     .Close()

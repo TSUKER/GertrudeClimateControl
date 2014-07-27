@@ -80,7 +80,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("35")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("30")>  _
         Public Property CRITICAL_T_MAX() As Integer
             Get
                 Return CType(Me("CRITICAL_T_MAX"),Integer)
@@ -92,7 +92,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("95")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("82")>  _
         Public Property CRITICAL_H_MAX() As Integer
             Get
                 Return CType(Me("CRITICAL_H_MAX"),Integer)
@@ -177,7 +177,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("55")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("76")>  _
         Public Property CRITICAL_H_MIN() As Integer
             Get
                 Return CType(Me("CRITICAL_H_MIN"),Integer)

@@ -9,10 +9,10 @@
       <Value Profile="(Default)">MegaSpider</Value>
     </Setting>
     <Setting Name="CRITICAL_T_MAX" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">35</Value>
+      <Value Profile="(Default)">30</Value>
     </Setting>
     <Setting Name="CRITICAL_H_MAX" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">95</Value>
+      <Value Profile="(Default)">82</Value>
     </Setting>
     <Setting Name="SMS_ENABLE" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -33,7 +33,7 @@
       <Value Profile="(Default)">Attention! Your Pet ({PET_NAME}) be in a position to unfavorable atmospheric ambience</Value>
     </Setting>
     <Setting Name="CRITICAL_H_MIN" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">55</Value>
+      <Value Profile="(Default)">76</Value>
     </Setting>
     <Setting Name="CRITICAL_T_MIN" Type="System.String" Scope="User">
       <Value Profile="(Default)">23</Value>
