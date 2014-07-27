@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM3")>  _
         Public Property COMPORT() As String
             Get
                 Return CType(Me("COMPORT"),String)
@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("MegaSpider")>  _
         Public Property PETNAME() As String
             Get
                 Return CType(Me("PETNAME"),String)
@@ -80,10 +80,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property CRITICAL_T() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("23")>  _
+        Public Property CRITICAL_T() As Integer
             Get
-                Return CType(Me("CRITICAL_T"),String)
+                Return CType(Me("CRITICAL_T"),Integer)
             End Get
             Set
                 Me("CRITICAL_T") = value
@@ -92,10 +92,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property CRITICAL_H() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("70")>  _
+        Public Property CRITICAL_H() As Integer
             Get
-                Return CType(Me("CRITICAL_H"),String)
+                Return CType(Me("CRITICAL_H"),Integer)
             End Get
             Set
                 Me("CRITICAL_H") = value
@@ -104,19 +104,19 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public ReadOnly Property SMSENABLE() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public ReadOnly Property SMS_ENABLE() As Boolean
             Get
-                Return CType(Me("SMSENABLE"),String)
+                Return CType(Me("SMS_ENABLE"),Boolean)
             End Get
         End Property
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public ReadOnly Property SMSTEXT() As String
+        Public ReadOnly Property SMS_TEXT() As String
             Get
-                Return CType(Me("SMSTEXT"),String)
+                Return CType(Me("SMS_TEXT"),String)
             End Get
         End Property
         
@@ -126,6 +126,37 @@ Namespace My
         Public ReadOnly Property SMS_KEY() As String
             Get
                 Return CType(Me("SMS_KEY"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property SMS_FROM() As String
+            Get
+                Return CType(Me("SMS_FROM"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SMS_TO() As String
+            Get
+                Return CType(Me("SMS_TO"),String)
+            End Get
+            Set
+                Me("SMS_TO") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Attention! Your Pet ({PET_NAME}) be in a position to unfavorable atmospheric ambi"& _ 
+            "ence")>  _
+        Public ReadOnly Property SMS_MSG_TMPL() As String
+            Get
+                Return CType(Me("SMS_MSG_TMPL"),String)
             End Get
         End Property
     End Class

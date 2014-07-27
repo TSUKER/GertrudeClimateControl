@@ -3,25 +3,34 @@
   <Profiles />
   <Settings>
     <Setting Name="COMPORT" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">COM3</Value>
     </Setting>
     <Setting Name="PETNAME" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">MegaSpider</Value>
     </Setting>
-    <Setting Name="CRITICAL_T" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="CRITICAL_T" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">23</Value>
     </Setting>
-    <Setting Name="CRITICAL_H" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="CRITICAL_H" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">70</Value>
     </Setting>
-    <Setting Name="SMSENABLE" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+    <Setting Name="SMS_ENABLE" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="SMSTEXT" Type="System.String" Scope="Application">
+    <Setting Name="SMS_TEXT" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SMS_KEY" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMS_FROM" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMS_TO" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMS_MSG_TMPL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Attention! Your Pet ({PET_NAME}) be in a position to unfavorable atmospheric ambience</Value>
     </Setting>
   </Settings>
 </SettingsFile>
