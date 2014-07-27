@@ -12,4 +12,8 @@
         main.mainStart()
 
     End Sub
+
+    Private Sub btnAbout_Click(sender As System.Object, e As System.EventArgs) Handles btnAbout.Click
+        SoundAlertPlay()
+    End Sub
 End Class

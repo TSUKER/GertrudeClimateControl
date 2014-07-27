@@ -77,6 +77,57 @@ Namespace My
                 Me("PETNAME") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property CRITICAL_T() As String
+            Get
+                Return CType(Me("CRITICAL_T"),String)
+            End Get
+            Set
+                Me("CRITICAL_T") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property CRITICAL_H() As String
+            Get
+                Return CType(Me("CRITICAL_H"),String)
+            End Get
+            Set
+                Me("CRITICAL_H") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property SMSENABLE() As String
+            Get
+                Return CType(Me("SMSENABLE"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property SMSTEXT() As String
+            Get
+                Return CType(Me("SMSTEXT"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property SMS_KEY() As String
+            Get
+                Return CType(Me("SMS_KEY"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
