@@ -3,34 +3,40 @@
   <Profiles />
   <Settings>
     <Setting Name="COMPORT" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM3</Value>
+      <Value Profile="(Default)">COM22</Value>
     </Setting>
     <Setting Name="PETNAME" Type="System.String" Scope="User">
       <Value Profile="(Default)">MegaSpider</Value>
     </Setting>
-    <Setting Name="CRITICAL_T" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">23</Value>
+    <Setting Name="CRITICAL_T_MAX" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">35</Value>
     </Setting>
-    <Setting Name="CRITICAL_H" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">70</Value>
+    <Setting Name="CRITICAL_H_MAX" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">95</Value>
     </Setting>
-    <Setting Name="SMS_ENABLE" Type="System.Boolean" Scope="Application">
+    <Setting Name="SMS_ENABLE" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="SMS_TEXT" Type="System.String" Scope="Application">
+    <Setting Name="SMS_TEXT" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SMS_KEY" Type="System.String" Scope="Application">
+    <Setting Name="SMS_KEY" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SMS_FROM" Type="System.String" Scope="Application">
+    <Setting Name="SMS_FROM" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SMS_TO" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SMS_MSG_TMPL" Type="System.String" Scope="Application">
+    <Setting Name="SMS_MSG_TMPL" Type="System.String" Scope="User">
       <Value Profile="(Default)">Attention! Your Pet ({PET_NAME}) be in a position to unfavorable atmospheric ambience</Value>
+    </Setting>
+    <Setting Name="CRITICAL_H_MIN" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+    <Setting Name="CRITICAL_T_MIN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">23</Value>
     </Setting>
   </Settings>
 </SettingsFile>

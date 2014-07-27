@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("COM3")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("COM22")>  _
         Public Property COMPORT() As String
             Get
                 Return CType(Me("COMPORT"),String)
@@ -80,62 +80,74 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("23")>  _
-        Public Property CRITICAL_T() As Integer
+         Global.System.Configuration.DefaultSettingValueAttribute("35")>  _
+        Public Property CRITICAL_T_MAX() As Integer
             Get
-                Return CType(Me("CRITICAL_T"),Integer)
+                Return CType(Me("CRITICAL_T_MAX"),Integer)
             End Get
             Set
-                Me("CRITICAL_T") = value
+                Me("CRITICAL_T_MAX") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("70")>  _
-        Public Property CRITICAL_H() As Integer
+         Global.System.Configuration.DefaultSettingValueAttribute("95")>  _
+        Public Property CRITICAL_H_MAX() As Integer
             Get
-                Return CType(Me("CRITICAL_H"),Integer)
+                Return CType(Me("CRITICAL_H_MAX"),Integer)
             End Get
             Set
-                Me("CRITICAL_H") = value
+                Me("CRITICAL_H_MAX") = value
             End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public ReadOnly Property SMS_ENABLE() As Boolean
+        Public Property SMS_ENABLE() As Boolean
             Get
                 Return CType(Me("SMS_ENABLE"),Boolean)
             End Get
+            Set
+                Me("SMS_ENABLE") = value
+            End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public ReadOnly Property SMS_TEXT() As String
+        Public Property SMS_TEXT() As String
             Get
                 Return CType(Me("SMS_TEXT"),String)
             End Get
+            Set
+                Me("SMS_TEXT") = value
+            End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public ReadOnly Property SMS_KEY() As String
+        Public Property SMS_KEY() As String
             Get
                 Return CType(Me("SMS_KEY"),String)
             End Get
+            Set
+                Me("SMS_KEY") = value
+            End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public ReadOnly Property SMS_FROM() As String
+        Public Property SMS_FROM() As String
             Get
                 Return CType(Me("SMS_FROM"),String)
             End Get
+            Set
+                Me("SMS_FROM") = value
+            End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
@@ -150,14 +162,41 @@ Namespace My
             End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Attention! Your Pet ({PET_NAME}) be in a position to unfavorable atmospheric ambi"& _ 
             "ence")>  _
-        Public ReadOnly Property SMS_MSG_TMPL() As String
+        Public Property SMS_MSG_TMPL() As String
             Get
                 Return CType(Me("SMS_MSG_TMPL"),String)
             End Get
+            Set
+                Me("SMS_MSG_TMPL") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("55")>  _
+        Public Property CRITICAL_H_MIN() As Integer
+            Get
+                Return CType(Me("CRITICAL_H_MIN"),Integer)
+            End Get
+            Set
+                Me("CRITICAL_H_MIN") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("23")>  _
+        Public Property CRITICAL_T_MIN() As String
+            Get
+                Return CType(Me("CRITICAL_T_MIN"),String)
+            End Get
+            Set
+                Me("CRITICAL_T_MIN") = value
+            End Set
         End Property
     End Class
 End Namespace

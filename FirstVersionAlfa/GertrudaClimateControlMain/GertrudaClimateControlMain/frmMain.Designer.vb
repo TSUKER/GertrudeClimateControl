@@ -97,6 +97,11 @@ Partial Class frmMain
         Me.lblNH.TabIndex = 6
         Me.lblNH.Text = "0%"
         '
+        'srlCOMPORT
+        '
+        Me.srlCOMPORT.PortName = "COM3"
+        Me.srlCOMPORT.ReadTimeout = 10000
+        '
         'frmMain
         '
         Me.AcceptButton = Me.btnStartStop

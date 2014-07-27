@@ -14,6 +14,9 @@
     End Sub
 
     Private Sub btnAbout_Click(sender As System.Object, e As System.EventArgs) Handles btnAbout.Click
-        SoundAlertPlay()
+        MsgBox(mdlCOM.GetStringFromCOMPort())
+        mdlCOM.GetAllPok()
+
+
     End Sub
 End Class
