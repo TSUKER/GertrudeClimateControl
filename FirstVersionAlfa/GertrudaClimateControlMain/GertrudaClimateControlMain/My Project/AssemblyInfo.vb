@@ -8,14 +8,14 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("GertrudaClimateControlMain")> 
+<Assembly: AssemblyTitle("Gertruda Climate Control")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("GertrudaClimateControlMain")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyProduct("Gertruda Climate Control Suits")> 
+<Assembly: AssemblyCopyright("Copyright © 0ring 2014")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)> 
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("a920a33c-6ab3-4880-8ea5-9c179036e212")> 
