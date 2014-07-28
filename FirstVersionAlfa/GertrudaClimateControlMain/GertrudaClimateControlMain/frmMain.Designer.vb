@@ -99,7 +99,7 @@ Partial Class frmMain
         '
         'srlCOMPORT
         '
-        Me.srlCOMPORT.PortName = "COM3"
+        Me.srlCOMPORT.PortName = "COM55"
         Me.srlCOMPORT.ReadTimeout = 10000
         '
         'frmMain

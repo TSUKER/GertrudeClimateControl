@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="COMPORT" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM22</Value>
+      <Value Profile="(Default)">COM55</Value>
     </Setting>
     <Setting Name="PETNAME" Type="System.String" Scope="User">
       <Value Profile="(Default)">MegaSpider</Value>
