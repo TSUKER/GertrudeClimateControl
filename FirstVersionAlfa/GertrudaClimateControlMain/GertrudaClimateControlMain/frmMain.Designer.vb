@@ -37,29 +37,29 @@ Partial Class frmMain
         '
         'btnSetting
         '
-        Me.btnSetting.Location = New System.Drawing.Point(1, 2)
+        Me.btnSetting.Location = New System.Drawing.Point(1, 33)
         Me.btnSetting.Name = "btnSetting"
         Me.btnSetting.Size = New System.Drawing.Size(115, 26)
         Me.btnSetting.TabIndex = 0
-        Me.btnSetting.Text = "Settings"
+        Me.btnSetting.Text = "настройки"
         Me.btnSetting.UseVisualStyleBackColor = True
         '
         'btnStartStop
         '
-        Me.btnStartStop.Location = New System.Drawing.Point(1, 34)
+        Me.btnStartStop.Location = New System.Drawing.Point(1, 3)
         Me.btnStartStop.Name = "btnStartStop"
         Me.btnStartStop.Size = New System.Drawing.Size(115, 30)
         Me.btnStartStop.TabIndex = 1
-        Me.btnStartStop.Text = "Start Monitor"
+        Me.btnStartStop.Text = "начать слежение"
         Me.btnStartStop.UseVisualStyleBackColor = True
         '
         'btnAbout
         '
-        Me.btnAbout.Location = New System.Drawing.Point(1, 69)
+        Me.btnAbout.Location = New System.Drawing.Point(1, 59)
         Me.btnAbout.Name = "btnAbout"
         Me.btnAbout.Size = New System.Drawing.Size(115, 21)
         Me.btnAbout.TabIndex = 2
-        Me.btnAbout.Text = "About"
+        Me.btnAbout.Text = "О программе"
         Me.btnAbout.UseVisualStyleBackColor = True
         '
         'lblNowTmpC
@@ -109,11 +109,11 @@ Partial Class frmMain
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(1, 96)
+        Me.btnExit.Location = New System.Drawing.Point(1, 81)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(115, 19)
         Me.btnExit.TabIndex = 7
-        Me.btnExit.Text = "EXIT"
+        Me.btnExit.Text = "Выход"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'frmMain
@@ -122,7 +122,7 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(329, 127)
+        Me.ClientSize = New System.Drawing.Size(329, 103)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.lblNH)
         Me.Controls.Add(Me.lblNT)

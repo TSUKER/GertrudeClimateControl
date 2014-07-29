@@ -10,6 +10,7 @@
 
     Private Sub frmMain_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
+        Me.Text = Application.ProductName
 
         main.mainStart()
 
@@ -30,13 +31,13 @@
             StartCheck = False
             mdlCOM.GetAllPok()
             tmrIntCheck.Enabled = True
-            btnStartStop.Text = "STOP"
+            btnStartStop.Text = "СТОП"
         Else
             srlCOMPORT.Close()
 
             StartCheck = True
             tmrIntCheck.Enabled = False
-            btnStartStop.Text = "START"
+            btnStartStop.Text = "СТАРТ"
         End If
 
 
