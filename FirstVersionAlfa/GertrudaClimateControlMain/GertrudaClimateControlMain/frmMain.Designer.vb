@@ -32,6 +32,7 @@ Partial Class frmMain
         Me.lblNH = New System.Windows.Forms.Label()
         Me.srlCOMPORT = New System.IO.Ports.SerialPort(Me.components)
         Me.tmrIntCheck = New System.Windows.Forms.Timer(Me.components)
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnSetting
@@ -100,14 +101,29 @@ Partial Class frmMain
         'srlCOMPORT
         '
         Me.srlCOMPORT.PortName = "COM55"
-        Me.srlCOMPORT.ReadTimeout = 10000
+        Me.srlCOMPORT.ReadTimeout = 5000
+        '
+        'tmrIntCheck
+        '
+        Me.tmrIntCheck.Interval = 10000
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(1, 96)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(115, 19)
+        Me.btnExit.TabIndex = 7
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AcceptButton = Me.btnStartStop
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(316, 100)
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ClientSize = New System.Drawing.Size(329, 127)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.lblNH)
         Me.Controls.Add(Me.lblNT)
         Me.Controls.Add(Me.Label1)
@@ -132,5 +148,6 @@ Partial Class frmMain
     Friend WithEvents lblNH As System.Windows.Forms.Label
     Friend WithEvents srlCOMPORT As System.IO.Ports.SerialPort
     Friend WithEvents tmrIntCheck As System.Windows.Forms.Timer
+    Friend WithEvents btnExit As System.Windows.Forms.Button
 
 End Class

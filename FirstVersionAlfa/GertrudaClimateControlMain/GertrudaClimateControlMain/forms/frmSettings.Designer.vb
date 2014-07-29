@@ -38,18 +38,18 @@ Partial Class frmSettings
         Me.btnAply = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.tmpMin = New System.Windows.Forms.NumericUpDown()
-        Me.tmpMAX = New System.Windows.Forms.NumericUpDown()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.tmpMAX = New System.Windows.Forms.NumericUpDown()
+        Me.tmpMin = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.humMAX = New System.Windows.Forms.NumericUpDown()
         Me.humMIN = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.tmpMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tmpMAX, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tmpMin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.humMAX, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.humMIN, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -193,15 +193,23 @@ Partial Class frmSettings
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Temperature"
         '
-        'tmpMin
+        'Label8
         '
-        Me.tmpMin.Location = New System.Drawing.Point(39, 22)
-        Me.tmpMin.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
-        Me.tmpMin.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.tmpMin.Name = "tmpMin"
-        Me.tmpMin.Size = New System.Drawing.Size(65, 20)
-        Me.tmpMin.TabIndex = 16
-        Me.tmpMin.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 47)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(30, 13)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "MAX"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 24)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(27, 13)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "MIN"
         '
         'tmpMAX
         '
@@ -213,23 +221,15 @@ Partial Class frmSettings
         Me.tmpMAX.TabIndex = 17
         Me.tmpMAX.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'Label7
+        'tmpMin
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 24)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(27, 13)
-        Me.Label7.TabIndex = 18
-        Me.Label7.Text = "MIN"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 47)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(30, 13)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "MAX"
+        Me.tmpMin.Location = New System.Drawing.Point(39, 22)
+        Me.tmpMin.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
+        Me.tmpMin.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.tmpMin.Name = "tmpMin"
+        Me.tmpMin.Size = New System.Drawing.Size(65, 20)
+        Me.tmpMin.TabIndex = 16
+        Me.tmpMin.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'GroupBox2
         '
@@ -286,7 +286,7 @@ Partial Class frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(567, 435)
+        Me.ClientSize = New System.Drawing.Size(309, 338)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnCancel)
@@ -309,8 +309,8 @@ Partial Class frmSettings
         Me.Text = "Setting"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.tmpMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tmpMAX, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tmpMin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.humMAX, System.ComponentModel.ISupportInitialize).EndInit()

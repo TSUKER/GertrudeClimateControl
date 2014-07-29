@@ -15,8 +15,8 @@
 
             With frmMain.srlCOMPORT
 
-                .PortName = sCom
-                .Open()
+                ' .PortName = sCom
+                ' .Open()
                 If .IsOpen = True Then
                     .WriteLine("T")
                     MsgBox("w-ok")
@@ -45,8 +45,8 @@
 
             With frmMain.srlCOMPORT
 
-                .PortName = sCom
-                .Open()
+                ' .PortName = sCom
+                '  .Open()
                 If .IsOpen = True Then
                     .WriteLine("H\r\n")
                     MsgBox("w-ok")
@@ -62,17 +62,21 @@
         End If
     End Function
     Public Function GetAllPok()
+        On Error GoTo 653
+
+        main.WriteToErrorLog("GetAllPok - start", "Getallpok")
 
         sCom = My.Settings.COMPORT
 
         If comState = False Then
             Return "BUSY"
+            main.WriteToErrorLog("COM port - busy", "Getallpok")
             Exit Function
         Else
             comState = False
 
-            Dim humidity As String
-            Dim Temrature As String
+            Dim humidity As String = 0
+            Dim Temrature As String = 0
 
             Dim stringFromCOM As String
             stringFromCOM = ""
@@ -80,25 +84,29 @@
             'get temperature
             With frmMain.srlCOMPORT
 
-                .PortName = sCom
-                .Open()
+                ' .PortName = sCom
+                ' .Open()
                 If .IsOpen = True Then
-                    .WriteLine("T") 'FOR TEST UART RX=TX: ("67.00")
+                    .WriteLine("H") 'FOR TEST UART RX=TX: ("67.00")
                     '  MsgBox("w-t-ok")
+                    main.WriteToErrorLog("GetAllPok - check H", "Getallpok")
                     humidity = .ReadLine.ToString()
-                    .Close()
+                    main.WriteToErrorLog("GetAllPok - Get H =" & humidity, "Getallpok")
+                    ' .Close()
                 End If
             End With
 
             'get humudity
             With frmMain.srlCOMPORT
-                .PortName = sCom
-                .Open()
+                ' .PortName = sCom
+                ' .Open()
                 If .IsOpen = True Then
-                    .WriteLine("H") 'FOR TEST UART RX=TX:("78.00")
+                    .WriteLine("T") 'FOR TEST UART RX=TX:("78.00")
+                    main.WriteToErrorLog("GetAllPok - check T", "Getallpok")
                     '   MsgBox("w-t-ok")
                     Temrature = .ReadLine.ToString()
-                    .Close()
+                    main.WriteToErrorLog("GetAllPok - Get T =" & Temrature, "Getallpok")
+                    '    .Close()
                 End If
             End With
 
@@ -107,12 +115,13 @@
             humidity = humidity.Replace(".", ",")
             Temrature = Temrature.Replace(".", ",")
 
+
             With frmMain
                 .lblNH.Text = CInt(humidity)
                 .lblNT.Text = CInt(Temrature)
 
                 'check critical temperature
-                If My.Settings.CRITICAL_T_MAX < .lblNT.Text > My.Settings.CRITICAL_T_MIN Then
+                 If My.Settings.CRITICAL_T_MAX < .lblNT.Text > My.Settings.CRITICAL_T_MIN Then
                     .lblNT.BackColor = Color.Green
                 Else
                     .lblNT.BackColor = Color.Red
@@ -129,6 +138,8 @@
             Return "OK"
 
         End If
+653:    main.WriteToErrorLog("GetAllPok - Error=" & Err.Description.ToString & " | " & Err.GetException.ToString, "Getallpok")
+
     End Function
 
 End Module
