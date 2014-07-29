@@ -17,10 +17,7 @@
     End Sub
 
     Private Sub btnAbout_Click(sender As System.Object, e As System.EventArgs) Handles btnAbout.Click
-
-
-
-
+        AboutBox.Show()
     End Sub
 
     Private Sub btnStartStop_Click(sender As System.Object, e As System.EventArgs) Handles btnStartStop.Click

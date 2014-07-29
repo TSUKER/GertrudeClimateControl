@@ -55,19 +55,19 @@ Partial Class frmTrayIcon
         '
         Me.mnuShowMain.Name = "mnuShowMain"
         Me.mnuShowMain.Size = New System.Drawing.Size(152, 22)
-        Me.mnuShowMain.Text = "Show Main"
+        Me.mnuShowMain.Text = "Главное окно"
         '
         'mnuSettings
         '
         Me.mnuSettings.Name = "mnuSettings"
         Me.mnuSettings.Size = New System.Drawing.Size(152, 22)
-        Me.mnuSettings.Text = "Settings"
+        Me.mnuSettings.Text = "Настройки"
         '
         'mnuAbout
         '
         Me.mnuAbout.Name = "mnuAbout"
         Me.mnuAbout.Size = New System.Drawing.Size(152, 22)
-        Me.mnuAbout.Text = "About"
+        Me.mnuAbout.Text = "О программе"
         '
         'Label1
         '

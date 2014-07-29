@@ -26,6 +26,7 @@
     End Sub
 
     Private Sub mnuAbout_Click(sender As System.Object, e As System.EventArgs) Handles mnuAbout.Click
+        AboutBox.Show()
         MsgBox("For About information please write to email: admin@0xff.link or visit http://gcc.codeplex.com ")
     End Sub
 End Class
